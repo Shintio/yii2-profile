@@ -1,6 +1,6 @@
 Profile with additional attributes for ActiveRecord
 ===================================================
-CRUD additional attributes without writing code.
+Create, update, delete additional attributes of model without change model code.
 
 Installation
 ------------
