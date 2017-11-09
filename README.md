@@ -2,6 +2,8 @@ Profile with additional attributes for ActiveRecord
 ===================================================
 Create, update, delete additional attributes of model without change model code.
 
+Это руководство также доступно [на русском языке](./README.ru.md).
+
 Installation
 ------------
 
@@ -71,7 +73,7 @@ $query=Profile::find(User::className());
 $query->where(['username'=>'admin']); // username- User's attribute
 // Indexed array for '%LIKE%' condition
 $query->andWhere(['LIKE','firstName','Adm']); // firstName- additional profile field
-$query->orWhere(['lastName','Great']); // lastName- additional profile field
+$query->orWhere(['lastName'=>'Great']); // lastName- additional profile field
 
 $profile=$query->one();
 //$profiles=$query->all();
