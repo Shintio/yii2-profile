@@ -22,11 +22,20 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
+Before start
 -----
 
 Before start you should create tables in your db. You can find SQL query in the end of this file.
 After create tables you should create or generate with gii ActiveRecord models for these tables.
+
+
+Usage
+-----
+
+For adding additional fields you should insert row to table '*enitity_profile_field*'.
+- **code**- string on which you can use this field.
+- **name**- string, Human-Understandable name of this field. Use this for display field name to users.
+- **type**- json, type of this field. This version only supports *`{"type":"text"}`*. More types in future updates.
 
 namespace:
 
@@ -78,15 +87,24 @@ echo $profile->getField('firstName'); // Moder
 
 $profile->setField('username','moder');
 
+echo '<pre>';
+// Get profile in array of Field ojbects
+var_dump($profile->getProfile());
+// Get profile in assoc array
+// var_dump($profile->getProfile(true));
+// Same as getProfile(true)
+// var_dump($profile->getProfileInArray());
+echo '</pre>';
+
 $profile->save();
 // username: moder
 // firstName: Moder
 // lastName: Great
 ```
 
-SQL for generate example tables you can find in file example.sql
+SQL for generate example tables you can find in file **example.sql**
 Also you can you this template for create table for any entities.
-Before executing this query replace all 'entity' to your entity name.
+Before executing this query replace all '*entity*' to your entity name.
 
 ```sql
 CREATE TABLE `entity` (
