@@ -1,0 +1,21 @@
+{
+    "name": "shintio/yii2-profile",
+    "description": "CRUD additional attributes without writing code.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Shintio",
+            "email": "af@shintio.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "shintio\\profile\\": ""
+        }
+    }
+}
